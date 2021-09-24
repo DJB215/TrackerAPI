@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
     res.json({ message: "Welcome to the Covid Tracker API" });
 });
 
-const PORT = process.env.PORT || 443;
+const PORT = process.env.PORT || 8080;
 
 require("./app/routes/test.routes")(app);
 
