@@ -4,10 +4,10 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-    origin: "http://localhost:3000"
+    origin: "https://localhost:3000"
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 
@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
     res.json({ message: "Welcome to the Covid Tracker API" });
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 443;
 
 require("./app/routes/test.routes")(app);
 
