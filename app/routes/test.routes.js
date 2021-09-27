@@ -7,7 +7,7 @@ module.exports = app => {
     router.post('/', tests.create);
 
     // Retrieve all Tests
-    router.get("/", tests.findAll);
+    router.get('/', tests.findAll);
 
     app.use('/api/tests', router);
 
